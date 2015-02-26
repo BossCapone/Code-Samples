@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebTime", "..\..\..\..\Downloads\ch19\ch19\WebTime\", "{F38A88F0-AF63-4D0B-ADB4-03E13E0DDDBF}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/WebTime"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Downloads\ch19\ch19\WebTime\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WebTime\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WebTime"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\Downloads\ch19\ch19\WebTime\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WebTime\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60905"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F38A88F0-AF63-4D0B-ADB4-03E13E0DDDBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F38A88F0-AF63-4D0B-ADB4-03E13E0DDDBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,3 @@
+c:\users\eric\documents\visual studio 2012\Projects\temp\temp\obj\Debug\temp.vbprojResolveAssemblyReference.cache
+c:\users\eric\documents\visual studio 2012\Projects\temp\temp\obj\Debug\temp.Resources.resources
+c:\users\eric\documents\visual studio 2012\Projects\temp\temp\obj\Debug\temp.vbproj.GenerateResource.Cache

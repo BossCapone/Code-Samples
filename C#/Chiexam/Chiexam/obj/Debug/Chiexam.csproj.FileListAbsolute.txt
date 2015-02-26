@@ -1,0 +1,11 @@
+c:\users\eric\documents\visual studio 2013\Projects\Chiexam\Chiexam\bin\Debug\Chiexam.exe.config
+c:\users\eric\documents\visual studio 2013\Projects\Chiexam\Chiexam\obj\Debug\Chiexam.csprojResolveAssemblyReference.cache
+c:\users\eric\documents\visual studio 2013\Projects\Chiexam\Chiexam\obj\Debug\Chiexam.Form1.resources
+c:\users\eric\documents\visual studio 2013\Projects\Chiexam\Chiexam\obj\Debug\Chiexam.Properties.Resources.resources
+c:\users\eric\documents\visual studio 2013\Projects\Chiexam\Chiexam\obj\Debug\Chiexam.csproj.GenerateResource.Cache
+c:\users\eric\documents\visual studio 2013\Projects\Chiexam\Chiexam\bin\Debug\exam.mdf
+c:\users\eric\documents\visual studio 2013\Projects\Chiexam\Chiexam\bin\Debug\exam_log.ldf
+c:\users\eric\documents\visual studio 2013\Projects\Chiexam\Chiexam\bin\Debug\Chiexam.exe
+c:\users\eric\documents\visual studio 2013\Projects\Chiexam\Chiexam\bin\Debug\Chiexam.pdb
+c:\users\eric\documents\visual studio 2013\Projects\Chiexam\Chiexam\obj\Debug\Chiexam.exe
+c:\users\eric\documents\visual studio 2013\Projects\Chiexam\Chiexam\obj\Debug\Chiexam.pdb

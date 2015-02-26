@@ -1,0 +1,198 @@
+﻿<%@ Page Title="Home Page" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Default.aspx.vb" Inherits="_Default" %>
+
+<script runat="server">
+
+    Protected Sub Page_Load(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Protected Sub GridView1_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Protected Sub SqlDataSource1_Selecting(sender As Object, e As SqlDataSourceSelectingEventArgs)
+
+    End Sub
+
+    Protected Sub SqlDataSource6_Selecting(sender As Object, e As SqlDataSourceSelectingEventArgs)
+
+    End Sub
+</script>
+
+
+<asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1><%: Title %>.</h1>
+                <h2>Modify this template to jump-start your ASP.NET application.</h2>
+            </hgroup>
+            <p>
+                To learn more about ASP.NET, visit <a href="http://asp.net" title="ASP.NET Website">http://asp.net</a>.
+                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET.
+                If you have any questions about ASP.NET visit <a href="http://forums.asp.net/18.aspx" title="ASP.NET Forum">our forums</a>.
+            </p>
+        </div>
+    </section>
+</asp:Content>
+<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <h3>We suggest the following:</h3>
+    <ol class="round">
+        <li class="one">
+            <h5>Getting Started</h5>
+            ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
+            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+            <a href="http://go.microsoft.com/fwlink/?LinkId=245146">Learn more…</a>
+        </li>
+        <li class="two">
+            <h5>Add NuGet packages and jump-start your coding</h5>
+            NuGet makes it easy to install and update free libraries and tools.
+            <a href="http://go.microsoft.com/fwlink/?LinkId=245147">Learn more…</a>
+        </li>
+        <li class="three">
+            <h5>Find Web Hosting</h5>
+            You can easily find a web hosting company that offers the right mix of features and price for your applications.
+            <a href="http://go.microsoft.com/fwlink/?LinkId=245143">Learn more…</a>
+        </li>
+    </ol>
+    <p>
+        &nbsp;</p>
+    <p>
+        Book Table<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Book_id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <AlternatingRowStyle BackColor="White" />
+            <Columns>
+                <asp:CommandField ShowSelectButton="True" />
+                <asp:BoundField DataField="Book_id" HeaderText="Book_id" ReadOnly="True" SortExpression="Book_id" />
+                <asp:BoundField DataField="Author" HeaderText="Author" SortExpression="Author" />
+                <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
+                <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+                <asp:CheckBoxField DataField="available" HeaderText="available" SortExpression="available" />
+            </Columns>
+            <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+            <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
+            <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+            <SortedAscendingCellStyle BackColor="#FDF5AC" />
+            <SortedAscendingHeaderStyle BackColor="#4D0000" />
+            <SortedDescendingCellStyle BackColor="#FCF6C0" />
+            <SortedDescendingHeaderStyle BackColor="#820000" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Book]" OnSelecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
+    </p>
+    <p>
+        &nbsp;</p>
+    <p>
+        <asp:FormView ID="FormView1" runat="server" DataSourceID="SqlDataSource6" DefaultMode="Insert">
+            <EditItemTemplate>
+                name:
+                <asp:TextBox ID="nameTextBox" runat="server" Text='<%# Bind("name") %>' />
+                <br />
+                category:
+                <asp:TextBox ID="categoryTextBox" runat="server" Text='<%# Bind("category") %>' />
+                <br />
+                price:
+                <asp:TextBox ID="priceTextBox" runat="server" Text='<%# Bind("price") %>' />
+                <br />
+                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            </EditItemTemplate>
+            <InsertItemTemplate>
+                name:
+                <asp:TextBox ID="nameTextBox" runat="server" Text='<%# Bind("name") %>' />
+                <br />
+                category:
+                <asp:TextBox ID="categoryTextBox" runat="server" Text='<%# Bind("category") %>' />
+                <br />
+                price:
+                <asp:TextBox ID="priceTextBox" runat="server" Text='<%# Bind("price") %>' />
+                <br />
+                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            </InsertItemTemplate>
+            <ItemTemplate>
+                name:
+                <asp:Label ID="nameLabel" runat="server" Text='<%# Bind("name") %>' />
+                <br />
+                category:
+                <asp:Label ID="categoryLabel" runat="server" Text='<%# Bind("category") %>' />
+                <br />
+                price:
+                <asp:Label ID="priceLabel" runat="server" Text='<%# Bind("price") %>' />
+                <br />
+
+                <br />
+                <br />
+                Beverage&#39;<br />
+                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource2" DataTextField="name" DataValueField="name" SelectedValue='<%# Bind("price") %>'>
+                </asp:DropDownList>
+                <br />
+                <br />
+                Appetizer<br />
+                <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource3" DataTextField="name" DataValueField="name" SelectedValue='<%# Bind("price") %>'>
+                </asp:DropDownList>
+                <br />
+                <br />
+                Main Course<br />
+                <asp:DropDownList ID="DropDownList3" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource4" DataTextField="name" DataValueField="name" SelectedValue='<%# Bind("price") %>'>
+                </asp:DropDownList>
+                <br />
+                <br />
+                Dessert<br />
+                <asp:DropDownList ID="DropDownList4" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource5" DataTextField="name" DataValueField="name">
+                </asp:DropDownList>
+                <br />
+                <br />
+                <asp:Button ID="Button1" runat="server" Text="Button" />
+                <br />
+                <br />
+                Subtotal:
+                <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+                <br />
+                Tax: 0.07<br /> Total:
+                <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+            </ItemTemplate>
+        </asp:FormView>
+        <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Menu]" OnSelecting="SqlDataSource6_Selecting"></asp:SqlDataSource>
+    </p>
+    <p>
+        Subtotal: <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+    </p>
+    <p>
+        Tax: 0.07</p>
+    <p>
+        Total: <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    </p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT [name] FROM [Menu] WHERE ([category] = @category)">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="dessert" Name="category" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </p>
+    <p>
+&nbsp;<asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT [name] FROM [Menu] WHERE ([category] = @category)">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="main course" Name="category" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+&nbsp;<asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT [name] FROM [Menu] WHERE ([category] = @category)">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="appetizer" Name="category" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+&nbsp;<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT [name] FROM [Menu] WHERE ([category] = @category)">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="beverage" Name="category" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+</asp:Content>

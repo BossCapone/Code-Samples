@@ -1,0 +1,6 @@
+c:\users\eric\documents\visual studio 2013\Projects\COP4365\COP4365\bin\Debug\COP4365.exe.config
+c:\users\eric\documents\visual studio 2013\Projects\COP4365\COP4365\obj\Debug\COP4365.csprojResolveAssemblyReference.cache
+c:\users\eric\documents\visual studio 2013\Projects\COP4365\COP4365\bin\Debug\COP4365.exe
+c:\users\eric\documents\visual studio 2013\Projects\COP4365\COP4365\bin\Debug\COP4365.pdb
+c:\users\eric\documents\visual studio 2013\Projects\COP4365\COP4365\obj\Debug\COP4365.exe
+c:\users\eric\documents\visual studio 2013\Projects\COP4365\COP4365\obj\Debug\COP4365.pdb
